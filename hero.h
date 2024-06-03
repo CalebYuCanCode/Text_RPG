@@ -7,7 +7,7 @@
 
 using namespace std;
 
-class hero {// use inheritance
+class hero_class {// use inheritance
 
 
 
@@ -20,13 +20,11 @@ public:
 
 	vector<int> hero_stats = { health, damage, defense, agility };
 
-	hero();
+	void set_stats(int new_health_stat, int new_damage_stat, int new_defense_stat, int new_agility_stat);
 
-	void getting_data();
+	void get_hero_stats();
 
 	void hero_tools(int sword, int bow, int axe);
-
-	void hero_health(int health);
 
 	void inventory();
 };
