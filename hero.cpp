@@ -24,14 +24,14 @@ void hero_class::set_stats(int new_health_stat, int new_damage_stat, int new_def
 	agility = new_agility_stat;
 }
 
-void hero_class::hero_tools(int sword, int bow, int axe) {// focus on a weapon system later to see if you really want it
+void hero_class::hero_tools(int sword, int bow, int axe) {// focus on a weapon system later to see if you really want it// needs a complete rework
 
 	sword = 0;
 	bow = 0;
 	axe = 0;
 }
 
-void hero_class::inventory(){
+void hero_class::inventory(){// figure out how to change these stats
 
 unordered_map<string, int> inventory{
 {"Small Potions", 0},

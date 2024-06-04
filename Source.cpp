@@ -84,5 +84,5 @@ using namespace std;
 			cout << "YOUR CHARACTER GETS 1 DEFENSE, 1 ATTACK, 1 DAMAGE, 1 AGILITY, AND 1 HEALTH!" << endl;//give him a slice of cheese
 			player.set_stats(1, 1 , 1, 1);
 		}
-	
+		player.get_hero_stats();
 	} 
