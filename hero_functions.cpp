@@ -1,1 +1,0 @@
-//use this for everyday functions that are not classes but need to be in global scope
