@@ -17,9 +17,9 @@ void battle() {// place this when needed in the game
 	void enemies(); {
 		switch (rng) {
 		case 1:
-			enemy = "sneck1";//have this set it up like the hero class
+			enemy = "sneck1";//change this to use functions
 			sneck.set_stats(3, 3, 3);
-			sneck.get_hero_stats();
+			sneck.get_hero_stats(); 
 			break;
 		case 2:
 			enemy = "sneck2";
