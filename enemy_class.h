@@ -1,4 +1,5 @@
 #pragma once
+#include "battlesystems.h"
 #include <iostream>
 #include <string>
 #include <unordered_map>

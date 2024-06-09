@@ -73,7 +73,7 @@ void battle_actions() {//this function need to get stats to be able to adequatel
 		cout << "Attack | Use Item | Flee" << endl;
 		getline(cin, action);//while loop and have some condition
 		if (action == "Attack" || action == "attack") {
-
+			health -= 2;
 		}
 		else if (action == "Use Item" || action == "use item" || action == "Item" || action == "item") {
 
