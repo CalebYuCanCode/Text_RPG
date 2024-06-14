@@ -2,12 +2,9 @@
 #include "battlesystems.h"
 #include <iostream>
 #include <string>
-#include <unordered_map>
-#include <vector>
-#include <string>
 //what if you use functions premade functions of all the enemies
-int health;
-int damage;
-int defense;
-
+static int enemy_health;
+static int enemy_damage;
+static int enemy_defense;
+string enemy_name;
 void enemy_sneck();

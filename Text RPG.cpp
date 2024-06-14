@@ -3,6 +3,7 @@
 #include <unordered_map>
 #include <vector>
 #include "hero_class.h"
+#include "enemy_class.h"
 #include "battlesystems.h"
 using namespace std;
 
@@ -16,6 +17,7 @@ int main() {
 	battle();
 	battle_actions();
 
+	enemy_sneck();
 
 	player.get_hero_stats();//use this for when the player wants to get the stats
 

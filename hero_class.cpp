@@ -34,8 +34,7 @@ void hero_class::hero_tools(int sword, int bow, int axe) {// focus on a weapon s
 void hero_class::inventory() {// figure out how to change these stats
 
 	unordered_map<string, int> inventory{
-	{"Small Potions", 0},
-	{"Large Potions", 0}
+	{"Health Potions", 0}
 	};
-
+	//you can use an if statement to add a health potion
 };
