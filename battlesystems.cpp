@@ -1,42 +1,41 @@
 #include "battlesystems.h"
+#include "enemy_class.h"
 #include <string>
 #include <iostream>
 #include <cstdlib>
 using namespace std;
+srand((unsigned)time(NULL));
 
-void battle() {// place this when needed in the game
+void enemies(string& enemy){//see if this is useful
+	int rng = 1 + (rand() % 5);
+	switch (rng) {
+	case 1:
+		enemy = "sneck1";//change this to use functions
+		break;
+	case 2:
+		enemy = "sneck2";
+
+		break;
+	case 3:
+		enemy = "sneck3";
+
+		break;
+	case 4:
+		enemy = "sneck4";
+
+		break;
+	case 5:
+		enemy = "sneck5";
+
+		break;
+	}
+}
+
+void battle(){// place this when needed in the game
 
 	string enemy;
 
-
-	srand((unsigned)time(NULL));
 	int battle = 1 + (rand() % 5);
-	int rng = 1 + (rand() % 5);
-
-
-	void enemies(); {//see if this is useful
-		switch (rng) {
-		case 1:
-			enemy = "sneck1";//change this to use functions
-			break;
-		case 2:
-			enemy = "sneck2";
-
-			break;
-		case 3:
-			enemy = "sneck3";
-
-			break;
-		case 4:
-			enemy = "sneck4";
-
-			break;
-		case 5:
-			enemy = "sneck5";
-
-			break;
-		}
-	}
 
 	switch (battle) {
 	case 1:
@@ -57,32 +56,32 @@ void battle() {// place this when needed in the game
 	}
 }
 
-static void battle_actions(int& enemy_health, int& enemy_defense, int& enemy_attack, int& player_health, int& player_defense,int& player_attack, int& player_agility, int& player_items, string& enemy_name){//take player health from hero_class
+static void battle_actions(int& enemy_health, int& enemy_defense, int& enemy_attack, int& player_health, int& player_defense,int& player_attack, int& player_agility, int& player_items, string& enemy){//take player health from hero_class
 
 	srand((unsigned)time(NULL));
 	int percent_chance = (rand() % (100)) + 1;
 
-	string action;
 	
 
 	bool isBattleOver = false;
 	while (!isBattleOver) {
 
+		string action;
 		int enemy_action = 0;
 
 		cout << "What do you want to do?" << endl;
 		cout << "Attack | Use Item | Flee" << endl;
 		getline(cin, action);
 
-		if (action == "Attack" || action == "attack") {
-
+		if (action == "attack") {
+			//use a new variable to take away the damage
 			enemy_health -= 2;//add calculation to defense
 			if (enemy_health <= 0) {//change the enemy function in there
 				cout << "Enemy defeated!" << endl;
 				isBattleOver = true;
 			}
 		}
-		else if (action == "Use Item" || action == "use item" || action == "Item" || action == "item") {
+		else if (action == "use item" || action == "item") {
 
 			if (player_items > 0) {
 				player_health += 5;//change this stat based on how it is
@@ -93,7 +92,7 @@ static void battle_actions(int& enemy_health, int& enemy_defense, int& enemy_att
 				cout << "You have no items left!" << endl;
 			}
 		}
-		else if (action == "Flee" || action == "flee") {//percent chance based on agility
+		else if (action == "flee") {//percent chance based on agility
 
 			cout << "You fled the battle!" << endl;
 			isBattleOver = true;
@@ -126,3 +125,4 @@ static void battle_actions(int& enemy_health, int& enemy_defense, int& enemy_att
 
 	}
 }
+

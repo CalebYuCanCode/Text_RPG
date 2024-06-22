@@ -1,4 +1,6 @@
 #include "enemy_class.h"
+#include <iostream>
+#include <string>
 using namespace std;
 
 void enemy_sneck() {
