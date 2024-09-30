@@ -3,7 +3,8 @@
 #include <string>
 using namespace std;
 
-void enemy_sneck() {
+void enemy_sneck() {//we do not need to do this as we have static variables We can create an object that has these variables to have different things. 
+	//Will probably have to rework now as it is an object
 	enemy_name = "sneck";
 	enemy_health = 6;
 	enemy_damage = 9;
