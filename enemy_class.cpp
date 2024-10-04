@@ -8,7 +8,7 @@ enemy_health;
 enemy_damage;
 enemy_defense;
 
-void enemy()
+void enemy(enemy_heallth, enemy_damage, enemy_defense, enemy_name)
 {
 	
 }
